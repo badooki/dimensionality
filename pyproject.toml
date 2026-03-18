@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dimensionality"
+version = "0.1.0"
+description = "Bias-corrected participation ratio estimator for measuring dimensionality of neural representations"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Chanwoo Chun" },
+    { name = "Abdulkadir Canatar" },
+    { name = "SueYeon Chung" },
+    { name = "Daniel Lee" },
+]
+keywords = [
+    "neuroscience",
+    "dimensionality",
+    "participation ratio",
+    "neural manifold",
+    "representation geometry",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "numpy>=1.24",
+    "opt_einsum>=3.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "matplotlib>=3.6",
+    "scipy>=1.10",
+    "jupyter",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dimensionality"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
