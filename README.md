@@ -8,7 +8,7 @@ Bias-corrected **participation ratio (PR)** estimators for measuring the dimensi
 
 ---
 
-## Background
+## 📐 Background
 
 Given a neural activation matrix $\Phi \in \mathbb{R}^{P\times Q}$ (P stimuli × Q neurons), the participation ratio
 
@@ -33,7 +33,7 @@ An additional `participation_ratio_finite` estimator handles the case where Φ i
 
 ---
 
-## Installation
+## 📦 Installation
 
 ```bash
 pip install dimensionality
@@ -51,7 +51,7 @@ pip install -e ".[dev]"
 
 ---
 
-## Quick start
+## 🚀 Quick start
 
 ```python
 import numpy as np
@@ -101,7 +101,7 @@ gamma_neuron = participation_ratio(Phi.T)
 
 ---
 
-## Finite underlying matrix
+## 🔢 Finite underlying matrix
 
 When Φ is a P×Q submatrix sampled without replacement from a finite R×C population matrix, use `participation_ratio_finite`:
 
@@ -120,7 +120,7 @@ result = participation_ratio_finite(Phi, R=5000, C=2000, return_naive=True)
 
 ---
 
-## Subsampling sweep
+## 📊 Subsampling sweep
 
 To assess how the estimate converges with sample size, sweep over P or Q:
 
@@ -152,13 +152,13 @@ result = sweep_dimensionality(Phi, axis='P', estimator='finite', R=5000, C=2000)
 
 ---
 
-## Important: do not pre-center
+## ⚠️ Important: do not pre-center
 
 The bias corrections rely on an algebraic three-term centering structure built into the estimator formulas.  Subtracting column means from Φ before passing it to the estimator introduces statistical dependencies between rows that break the bias correction.  **Pass the raw activation matrix directly.**
 
 ---
 
-## API reference
+## 🔧 API reference
 
 ### `participation_ratio(Phi, Phi2=None, *, return_all=False, return_parts=False)`
 
@@ -197,7 +197,7 @@ Plot the output of `sweep_dimensionality`.  Returns `(fig, ax)`.
 
 ---
 
-## Repository structure
+## 🗂️ Repository structure
 
 ```
 src/
@@ -217,7 +217,7 @@ examples/
 
 ---
 
-## Citation
+## 📄 Citation
 
 If you use this package, please cite:
 
