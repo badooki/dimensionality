@@ -12,16 +12,13 @@ Bias-corrected **participation ratio (PR)** estimators for measuring the dimensi
 
 Given a neural activation matrix $\Phi \in \mathbb{R}^{P\times Q}$ (P stimuli × Q neurons), the participation ratio
 
-```
+
 $$ \gamma =\frac{\left(\sum_i \lambda_i \right)^2}{\sum_i \lambda_i^2} $$
-```
+
 
 is a soft count of the number of nonzero eigenvalues of the stimulus covariance $K=\frac{1}{Q}\Phi\Phi^\top$.  The naive estimator is severely biased downward when P or Q is small — it behaves approximately as a harmonic mean of P, Q, and the true $\gamma$:
 
-```
-E[1/γ_naive] ≈ 1/P + 1/Q + 1/γ
-\mathbb{E}\left[ \frac{1}{\gamma_{\text{naive}}}\right] \approx \frac{1}{P}+ \frac{1}{Q} +\frac{1}{\gamma}
-```
+$$ \mathbb{E}\left[ \frac{1}{\gamma_{\text{naive}}}\right] \approx \frac{1}{P}+ \frac{1}{Q} +\frac{1}{\gamma} $$
 
 This package provides unbiased estimators that correct for finite P and/or Q by averaging over disjoint index sets.
 
