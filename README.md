@@ -1,4 +1,4 @@
-# dimensionality
+# Sample-size invariant measure of dimensionality
 
 Bias-corrected **participation ratio (PR)** estimators for measuring the dimensionality of neural representation manifolds, as introduced in:
 
