@@ -45,3 +45,7 @@ packages = ["src/dimensionality"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[project.urls]
+Homepage = "https://github.com/badooki/dimensionality"
+Paper = "https://arxiv.org/abs/2509.26560"
