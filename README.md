@@ -36,13 +36,13 @@ An additional `participation_ratio_finite` estimator handles the case where Φ i
 ## 📦 Installation
 
 ```bash
-pip install dimensionality
+pip install git+https://github.com/badooki/dimensionality.git
 ```
 
 Or, for development:
 
 ```bash
-git clone https://github.com/chun-chanwoo/dimensionality.git
+git clone https://github.com/badooki/dimensionality.git
 cd dimensionality
 pip install -e ".[dev]"
 ```
