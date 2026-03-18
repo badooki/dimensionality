@@ -4,15 +4,12 @@ build-backend = "hatchling.build"
 
 [project]
 name = "dimensionality"
-version = "0.1.0"
+version = "0.1.1"
 description = "Bias-corrected participation ratio estimator for measuring dimensionality of neural representations"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
     { name = "Chanwoo Chun" },
-    { name = "Abdulkadir Canatar" },
-    { name = "SueYeon Chung" },
-    { name = "Daniel Lee" },
 ]
 keywords = [
     "neuroscience",

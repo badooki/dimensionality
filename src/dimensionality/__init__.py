@@ -53,4 +53,4 @@ __all__ = [
     "sweep_dimensionality",
     "plot_sweep",
 ]
-__version__ = "0.1.0"
+__version__ = "0.1.1"
