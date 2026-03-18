@@ -10,16 +10,17 @@ Bias-corrected **participation ratio (PR)** estimators for measuring the dimensi
 
 ## Background
 
-Given a neural activation matrix Φ ∈ ℝ^{P×Q} (P stimuli × Q neurons), the participation ratio
+Given a neural activation matrix $\Phi \in \mathbb{R}^{P\times Q}$ (P stimuli × Q neurons), the participation ratio
 
 ```
-γ = (Σᵢ λᵢ)² / Σᵢ λᵢ²
+$$ \gamma =\frac{\left(\sum_i \lambda_i \right)^2}{\sum_i \lambda_i^2} $$
 ```
 
-is a soft count of the number of nonzero eigenvalues of the stimulus covariance K = (1/Q)ΦΦᵀ.  The naive estimator is severely biased downward when P or Q is small — it behaves approximately as a harmonic mean of P, Q, and the true γ:
+is a soft count of the number of nonzero eigenvalues of the stimulus covariance $K=\frac{1}{Q}\Phi\Phi^\top$.  The naive estimator is severely biased downward when P or Q is small — it behaves approximately as a harmonic mean of P, Q, and the true $\gamma$:
 
 ```
 E[1/γ_naive] ≈ 1/P + 1/Q + 1/γ
+\mathbb{E}\left[ \frac{1}{\gamma_{\text{naive}}}\right] \approx \frac{1}{P}+ \frac{1}{Q} +\frac{1}{\gamma}
 ```
 
 This package provides unbiased estimators that correct for finite P and/or Q by averaging over disjoint index sets.
@@ -29,7 +30,7 @@ This package provides unbiased estimators that correct for finite P and/or Q by 
 | `γ_naive` | nothing | baseline reference |
 | `γ_row` | row (stimulus) sampling bias | full neuron access, subsampled stimuli |
 | `γ_col` | column (neuron) sampling bias | full stimulus access, subsampled neurons |
-| `γ_both` | both row and column bias | general case **(recommended)** |
+| `γ_both` | both row and column bias | subsampled neurons, subsampled stimuli|
 
 An additional `participation_ratio_finite` estimator handles the case where Φ is a submatrix sampled without replacement from a large-but-finite R×C matrix (Appendix A.6 of the paper).
 
