@@ -41,6 +41,9 @@ dev = [
 [tool.hatch.build.targets.wheel]
 packages = ["src/dimensionality"]
 
+[tool.hatch.build.targets.sdist]
+exclude = ["legacy/", "CLAUDE.md"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
