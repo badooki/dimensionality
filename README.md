@@ -20,7 +20,7 @@ is a soft count of the number of nonzero eigenvalues of the stimulus covariance 
 
 $$ \mathbb{E}\left[ \frac{1}{\gamma_{\text{naive}}}\right] \approx \frac{1}{P}+ \frac{1}{Q} +\frac{1}{\gamma} $$
 
-However, obtaining the debiased estimate of $\gamma$ from $\Phi$ is not as simple as expressing $\gamma$ in the above equation in terms of $\gamma_{\text{naive}}}$. The equation for the estimator is quite long to write, so we provide this Python package so anyone can easily use it.
+However, obtaining the debiased estimate of $\gamma$ from $\Phi$ is not as simple as expressing $\gamma$ in the above equation in terms of $\gamma_{\text{naive}}$. The equation for the estimator is quite long to write, so we provide this Python package so anyone can easily use it.
 
 This package provides debiased estimators that correct for finite P and/or Q by averaging over disjoint index sets.
 
